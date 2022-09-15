@@ -5,10 +5,11 @@ import {
   ViewStyle,
   findNodeHandle,
 } from 'react-native';
-import type { MutableRefObject } from 'react';
+import React, { forwardRef } from 'react';
+import type { MutableRefObject, PropsWithChildren } from 'react';
 
 const LINKING_ERROR =
-  `The package 'react-native-popupmenu' doesn't seem to be linked. Make sure: \n\n` +
+  `The package '@popupmenu/react-native-popup-menu' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
@@ -30,9 +31,14 @@ if (!RCTPopupMenuView) {
   throw new Error(LINKING_ERROR);
 }
 
-export const PopupMenu = RCTPopupMenuView;
+export const PopupMenu = forwardRef<any, PropsWithChildren<PopupMenuProps>>(
+  (props, ref) => {
+    return <RCTPopupMenuView {...props} ref={ref} />;
+  }
+);
+
 export function showPopupMenu(
-  popupMenuRef: MutableRefObject<typeof PopupMenu>,
+  popupMenuRef: MutableRefObject<any>,
   anchorRef: MutableRefObject<any>
 ) {
   const popNode = findNodeHandle(popupMenuRef.current);
