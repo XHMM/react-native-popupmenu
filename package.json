@@ -1,7 +1,7 @@
 {
-  "name": "react-native-popupmenu",
+  "name": "@popupmenu/react-native-popup-menu",
   "version": "0.1.0",
-  "description": "test",
+  "description": "Provide a programmatically api for showing popup menu",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -33,7 +33,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "popup-menu",
+    "context-menu"
   ],
   "repository": "https://github.com/XHMM/react-native-popupmenu",
   "author": "xhmm <super.xhmm@gmail.com> (https://github.com/XHMM/react-native-popupmenu)",

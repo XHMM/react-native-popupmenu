@@ -1,6 +1,6 @@
 buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
-  def kotlin_version = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['Popupmenu_kotlinVersion']
+  def kotlin_version = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['PopupMenu_kotlinVersion']
 
   repositories {
       google()
@@ -26,11 +26,11 @@ if (isNewArchitectureEnabled()) {
 }
 
 def getExtOrDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties['Popupmenu_' + name]
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties['PopupMenu_' + name]
 }
 
 def getExtOrIntegerDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties['Popupmenu_' + name]).toInteger()
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties['PopupMenu_' + name]).toInteger()
 }
 
 android {
@@ -139,7 +139,7 @@ dependencies {
 if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
-    libraryName = "Popupmenu"
+    libraryName = "PopupMenu"
     codegenJavaPackageName = "com.reactnativepopupmenu"
   }
 }
