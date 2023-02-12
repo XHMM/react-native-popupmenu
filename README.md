@@ -1,11 +1,11 @@
 # React-Native-PopupMenu
-Provide a programmatically api for showing popup menu
+Provide a imperative api for showing popup menu
 
 
 ## Why this?
-Although there are repos has implemented native popup menu component for android ([@react-native-menu/menu](https://github.com/react-native-menu/menu),  [react-native-context-menu-view](https://github.com/mpiannucci/react-native-context-menu-view)), but they **didn't solve the issue when pressable component as the children of popup menu, press will not be triggered**, using api to control showing seems more flexible.
+Although there are repos have implemented native popup menu for android ([@react-native-menu/menu](https://github.com/react-native-menu/menu),  [react-native-context-menu-view](https://github.com/mpiannucci/react-native-context-menu-view)), they **didn't solve the issue when pressable component as the children of popup menu, pressing will not be triggered**, using api to control showing seems more flexible.
 
-This repo didn't provide ios implementation, because ios doesn't have this issue, but if someone has this requirement, open a PR or issue is welcomed.
+This repo didn't provide ios implementation, because ios doesn't have above issue, but if someone has this requirement, PR or issue is welcome.
 
 
 
@@ -21,7 +21,7 @@ npm i @popupmenu/react-native-popup-menu
 
 no linking required when using react-native 0.60+
 
-## Usage
+## Example
 
 ```js
 import * as React from 'react';
